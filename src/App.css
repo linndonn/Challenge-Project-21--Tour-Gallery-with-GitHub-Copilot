@@ -1,10 +1,14 @@
+/* Root container styling */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #1e1e2f; /* Dark background */
+  color: #e0e0e0; /* Light text color */
 }
 
+/* Logo styling */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -12,12 +16,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #ff4d4d); /* Red highlight on hover */
 }
 
+/* Animation for spinning logo */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,16 +29,31 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* Card styling */
 .card {
   padding: 2em;
+  background-color: #2a2a3d; /* Slightly lighter dark background */
+  border: 1px solid #ff4d4d; /* Red border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 300ms, box-shadow 300ms; /* Smooth hover effect */
+}
+.card:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+  border-color: #e03b3b; /* Darker red border on hover */
 }
 
-.read-the-docs {
-  color: #888;
+/* Button styling */
+button {
+  background-color: #ff4d4d; /* Red button background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 300ms;
+}
+button:hover {
+  background-color: #e03b3b; /* Darker red on hover */
 }
